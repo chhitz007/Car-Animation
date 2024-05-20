@@ -1,0 +1,2 @@
+# Car-Animation
+ This project showcases a simple yet dynamic moving car animation created using HTML and CSS. The animation features a car smoothly traveling across the screen, simulating real-life motion. Key CSS techniques such as keyframes, transitions, and transforms are employed to bring the animation to life. The project demonstrates basic animation principles and the power of CSS in creating visually appealing web interactions without relying on JavaScript.

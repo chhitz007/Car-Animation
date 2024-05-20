@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+    animation: shakebody linear 5s infinite;        /* Here by using this you shake the car body infinte time at 6s */
+}
+.sky{                                               /* Here you set up the sky */
+    height: 100vh;                    
+    width: 100%;
+    background-image: url(Images/nights.avif);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: cover;
+}
+
+.trees{                                              /* Here you set up the Trees */
+    height: 100vh;
+    width: 100%;
+    background-image: url(Images/trees.png);
+    background-size: cover; 
+    position: absolute;
+    top: -144px;                                    /* Here you set the trees big by negative top  */
+}
+.track{                                              /* Here you set up the tracks  */
+    height: 60vh;
+    width: 800vw;
+    background-image: url(Images/track.png);
+    background-repeat: repeat-x; 
+    position: absolute;
+    top: 70vh;
+    animation: carMove linear 5s infinite;            /* Here you make the tracks moves fast  infinite at 13s*/
+
+}
+
+.car{                                                  /* Here you set up the car */
+    height: 100px;
+    width: 380px;
+    background-image: url(Images/car_body.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 444px;
+    bottom:30vh;
+    animation: shake linear .3s infinite;
+
+}
+
+
+.wheel1 img{                                           /* Here you set up the wheel 1  */
+    width: 77px;
+    position: relative;
+    top:42px;
+    left:42px;
+    animation: wheelRotation linear .16s infinite;     /* By this comment you make the wheel moves infinite at 16s */
+}
+
+
+.wheel2 img{                                          /* Here you set up the wheel 2  */
+    width: 77px;
+    position: relative;
+    top: -39px;
+    left: 235px;
+    animation: wheelRotation linear .16s infinite;    /* By this comment you make the wheel moves infinite at 16s ... You change  the speed  */
+
+}
+
+@keyframes wheelRotation                             /* This is the line, by doing this you make wheels moves ....you animate  */
+{
+    100%{
+        transform: rotate(360deg);                  /* By rotating 360degree the wheels moves in full circle  */
+    }
+}
+
+@keyframes carMove                                  /* Same thing you make the car move  */
+{
+    100%{
+        transform: translateX(-500vw);               /* Here first Translate-->X means  to move left and Right   */
+    }
+}
+
+@keyframes shake                                /* Same thing you make the car shake......this keyframes is important word  */
+{
+    0%{
+        transform: translateY(-5px);            /* Here first Translate-->Y means  to move up and down  and then says first go -5 and then come 5 and then go 5...infinte means up and down and up and down so thats how you move things in X and Y  */
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+@keyframes shakebody                              /* Same thing like above   */
+{
+    0%{
+        transform: translateY(-50px);
+    }
+    50%{
+        transform: translateY(50px);
+    }
+    100%{
+        transform: translateY(-50px);
+    }
+}
